@@ -5,23 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nikkino Fiction</title>
     <link rel="stylesheet" href="scss/style.css">
+    <link rel="stylesheet" href="scss/navbar.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap-reboot.css">
 </head>
 
 <body>
     <nav class="navbar">
-        <div>
+        <div class="navbar-container">
             <span class="navbar-brand">Nikkino Fiction</span>
-            <ul class="navbar-nav">
-                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Campaigns</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Rules</a></li>
-            </ul>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">&#9776;</span>
+            </button>
+            <div id="navbarContent" class="collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Campaigns</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Rules</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
     <div id="home-grid">
         <header>
             <h1>Nikkino Fiction</h1>
+            <img src="" alt="">
+            <p>Creating games with memorable stories</p>
         </header>
         <main id="game-status">
             <h2>Campaign Status</h2>
@@ -50,7 +59,7 @@
                 <p>Info about the Site</p>
             </div>
         </section>
-        <aside id="schedule">
+        <aside class="game-schedule">
             <h2>game schuedle</h2>
             <div>
                 <p>Last session date</p>
@@ -59,12 +68,13 @@
                 <p>Next session date</p>
             </div>
         </aside>
-        <footer>
+        <footer class="foot">
             <span>📧 | tyfabs121@gmail.com</span>
             <span>📞 | 484-885-8542</span>
             <span>🛜 | @nianightglade</span>
         </footer>
     </div>
+    <script src="bootstrap/js/bootstrap.js"></script>
 </body>
 
 </html>
