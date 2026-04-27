@@ -1,0 +1,55 @@
+/* Home grid layout */
+
+#home-grid {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+        ". header header ."
+        ". main main aside"
+        ". info info aside"
+        ". about about .";
+}
+
+#home-header {
+    grid-area: header;
+}
+
+#game-status {
+    grid-area: main;
+}
+
+#play-info {
+    grid-area: info;
+}
+
+#about-us {
+    grid-area: about;
+}
+
+#game-schedule {
+    grid-area: aside;
+}
+
+/* header */
+
+.header-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main - Sections */
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Aside */
+
+.schedule-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
