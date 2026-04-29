@@ -1,3 +1,10 @@
+:root {
+    --card-bg-color: white;
+    --body-bg-color: #91B8C4;
+    --accent-color-1: #762C13;
+    --accent-color-2: #1F0C05;
+}
+
 .body-container {
     display: flex;
     flex-direction: column;
@@ -5,6 +12,11 @@
 }
 
 .body-content {
+    background-image: url("../img-dir/backdroppatternthing.png");
+    background-color: transparent;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
     flex: 1;
 }
 
