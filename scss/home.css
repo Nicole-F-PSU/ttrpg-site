@@ -1,16 +1,18 @@
-/* Home grid layout */
+/* Home grid mobile */
 
 #home-grid {
     width: 100%;
     display: grid;
     grid-template-areas:
-        ". header header ."
-        ". main main aside"
-        ". info info aside"
-        ". about about .";
-    grid-template-columns: 2fr 6fr auto 2fr;
-    gap: 24px;
+        "header"
+        "aside"
+        "main"
+        "info"
+        "about";
+    gap: 1rem 0.5rem;
+    align-content: start;
 }
+
 
 #home-header {
     grid-area: header;
@@ -37,46 +39,65 @@
 .header-container {
     display: flex;
     flex-direction: column;
-    background-color: var(--body-bg-color);
-    margin: 1rem 0 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    margin: 1.5rem 1rem;
+    padding: 1rem;
+    border-bottom: 2px solid black;
+    border-radius: 20px;
 }
 
+
 h1 {
+    flex: 1;
+
     background: linear-gradient(to top right, var(--accent-color-1), black);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
     display: inline-block;
+    border-bottom: 1px solid white;
 
-    font-size: 3rem;
     font-family: "Almendra", serif;
     font-weight: 700;
-    -webkit-text-stroke: 1px white;
+    -webkit-text-stroke: 0.8px white;
+    text-align: center;
 }
 
 .tagline {
+    flex-basis: 40%;
+    text-align: center;
     color: black;
-    font-size: 1.2rem;
     font-weight: 900;
     -webkit-text-stroke: 1px white;
 }
 
-/* Main - Sections */
 
-.home-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--card-bg-color);
-    border: 0.75rem ridge var(--accent-color-1);
-}
-
-/* Aside */
+/* Schedule */
 
 .schedule-container {
+    height: 100%;
+    margin: 0 1rem;
+    padding: 1rem 0;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     background-color: var(--body-bg-color);
+    border: 3px ridge white;
+}
+
+/* Tablet + Desktop Grid*/
+
+@media screen and (min-width: 850px) {
+    #home-grid {
+        grid-template-areas:
+            ". header header ."
+            ". aside main ."
+            ". aside info ."
+            ". about about .";
+        grid-template-columns: 1fr 2fr 5fr 1fr;
+    }
 }
