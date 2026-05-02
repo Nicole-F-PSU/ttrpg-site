@@ -34,53 +34,6 @@
     grid-area: aside;
 }
 
-/* header */
-
-.header-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: transparent;
-    margin: 1.5rem 1rem;
-    padding: 1rem;
-    border-bottom: 2px solid black;
-    border-radius: 20px;
-}
-
-h1 {
-    font-size: 2.2rem;
-    flex: 1;
-    border-bottom: 1px solid white;
-}
-
-h1,
-h2 {
-    background: linear-gradient(to top right, var(--accent-color-1), black);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    display: inline-block;
-
-    font-family: "Almendra", serif;
-    font-weight: 700;
-    -webkit-text-stroke: 0.8px white;
-    text-align: center;
-}
-
-
-
-.tagline {
-    flex-basis: 40%;
-    text-align: center;
-    color: black;
-    font-weight: 900;
-    -webkit-text-stroke: 1px white;
-    font-size: 1.1rem;
-}
-
-
 /* Schedule */
 
 .schedule-container {
@@ -103,7 +56,7 @@ h2 {
 }
 
 
-/* Tablet + Desktop Grid*/
+/* desktop grid */
 
 @media screen and (min-width: 850px) {
     #home-grid {
@@ -115,11 +68,8 @@ h2 {
         grid-template-columns: 1fr 2fr 5fr 1fr;
     }
 
-    h1 {
-        font-size: 4rem;
+    #game-schedule {
+        height: 60%;
     }
 
-    .tagline {
-        font-size: 1.5rem;
-    }
 }
